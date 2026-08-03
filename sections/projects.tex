@@ -11,10 +11,10 @@
     \item Validated economic significance via a volatility-targeting backtest (Quarter-Kelly sizing, 5bps slippage, $\leq$5$\times$ leverage), showing Neural-HAR reduced maximum drawdown by up to 7 percentage points vs.\ the HAR baseline (SPX: $-$35.2\% vs.\ $-$42.3\%) despite no Sharpe-ratio gain; independently identified and corrected a front-end-alignment bug in the evaluation pipeline that had inverted a significance result, ensuring full reproducibility of reported findings.
 \end{resumeList}
 
-\resumeEntry{ExplainSentinel --- Token-Level Interpretability for Financial Transformers}{\href{https://explainsentinel.streamlit.app}{explainsentinel.streamlit.app}}
+\resumeEntry{PrismXAI --- Multi-Layer Explainability System for Transformer Classifiers}{\href{https://prismxai.streamlit.app}{prismxai.streamlit.app}}
 \begin{resumeList}
-    \item Reverse-engineered a transformer model's (FinBERT) decision pathway across four analysis layers (tokenisation, logit decomposition, attention heatmaps, LIME attribution), reproducing 87.5\% accuracy / 86.0\% macro-F1 on Financial PhraseBank (n=2,264).
-    \item Designed a 3-tier caching architecture that compressed \char`\~150-perturbation LIME explanations to sub-second latency on CPU-only infrastructure, enabling real-time interpretability at production scale.
+    \item Built a four-layer model-interpretability pipeline (token attribution, logit decomposition, attention visualization, LIME) for transformer-based text classifiers, benchmarked against a financial-NLP baseline (FinBERT, 87.5\% accuracy / 86.0\% macro-F1 on Financial PhraseBank, n=2,264) to validate explanation fidelity.
+    \item Designed a 3-tier caching architecture that cut \char`\~150-perturbation LIME explanation latency to sub-second response on CPU-only infrastructure --- over 100$\times$ faster than naive per-request computation --- enabling real-time interpretability at production scale.
 \end{resumeList}
 
 \resumeEntry{Kandls --- Financial Chart Understanding using YOLOv8 + Multimodal Fusion}{\href{https://kandls.streamlit.app}{kandls.streamlit.app}}
